@@ -38,7 +38,7 @@ Après quelques tests infructueux sur des failles classiques sur la partie du lo
 </p>
 
 On y aperçoit 3 nouveaux liens dans le menu du haut :
-* Services (Accessible depuis notre compte)
+* Services (Inaccessible pour le moment depuis notre compte)
 * My account (Qui liste les informations du compte avec la possibilité de changer de mot de passe)
 * Contact (Un formulaire de contact qui permet de demander de l'aide)
 
