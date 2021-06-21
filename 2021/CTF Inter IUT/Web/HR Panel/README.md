@@ -173,7 +173,7 @@ Comme vous pouvez le constater, nous observons une ligne intéressante en bas de
   <br/>
   <b>FLAG 1 : CTFIUT{ab530536d50d07ffd429a5fdceb94c50322bd01ff71853332cbdb5a879a50742}</b>
 </p>
-<br/><br/>  
+<br/>
 
 # HR-Panel 2 - 200pts
   
@@ -301,7 +301,7 @@ On rédige et en envoie le document dans le formulaire, puis une fois envoyé, o
   <img src="https://github.com/Endeavxor/CTF-Writeups/blob/7bc045cf92370f097c422e65e143bbde357a953d/2021/CTF%20Inter%20IUT/Web/HR%20Panel/img/test_hr.gif" />
 </p>
 
-## Étape 3 : Exploitation d'une Local File Inclusion (LFI) grâce à une XML External Entity attack (XEE) dans le .docx
+## Étape 3 : Exploitation d'une Local File Inclusion (LFI) grâce à une XML External Entity Injection (XXE) dans le .docx
 
 Après une rapide recherche on s'aperçoit qu'il est possible de glisser une XXE dans le resume.docx. En effet les fichiers .docx ne sont que des archives contenant principalement des fichiers .xml. On peut donc unzip le .docx et aller modifier le contenu se situant dans /word/document.xml
 
@@ -523,9 +523,14 @@ Comme vous pouvez le constater, nous observons une ligne intéressante en haut d
   <br/>
   <b>FLAG 2 : CTFIUT{8bb84891897d7eea5244ddbb1662d0def6c30501c38269db0483d892c80dadce}</b>
 </p>
-<br/><br/>  
+<br/>
   
 # HR-Panel 3 - 150pts
+
+<p align="center">
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/f22b865cb76e87cd2338f5dbbd5ea7a14f937fce/2021/CTF%20Inter%20IUT/Web/HR%20Panel/img/hrpanel3.png" />
+</p>
+
 
 Au delà du flag, ce fichier contient des informations intéressantes dont deux commentaires pour le moins intriguants :
 ```html
@@ -554,7 +559,7 @@ PD9waHAKLyoKVE9ETzoKSXQgaXMgbmVjZXNzYXJ5IHRvIGZpeCB0aGUgcHJvYmxlbSB3aGVuIGFkZGlu
 </pre>
 </details>
 <details>
-  <summary>Page xCF8Pd382Qp3zOZTaS7H.php</summary>
+  <summary>Contenu xCF8Pd382Qp3zOZTaS7H.php</summary>
   
 ```php
 <?php
