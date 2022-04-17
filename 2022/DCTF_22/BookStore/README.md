@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="" />
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/f2793b53c31619cc39fa68ee12a67e485eda26a2/2022/DCTF_22/BookStore/img/bookstore.PNG" />
 </p>
 
 ## TLDR 
@@ -16,7 +16,7 @@
 The website simply contains a login page at first glance and the classic flaws (sqli, etc ...) do not seem to work
 
 <p align="center">
-  <img src="" />
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/f2793b53c31619cc39fa68ee12a67e485eda26a2/2022/DCTF_22/BookStore/img/loginpage.PNG" />
 </p>
 
 
@@ -611,7 +611,7 @@ The function **parseRequest()** is used in the **login** phase and the hash **21
 After login in with username=admin and password=admin we are redirected to this static page *(containing **8 paragraphs** )* : 
 
 <p align="center">
-  <img src="" />
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/f2793b53c31619cc39fa68ee12a67e485eda26a2/2022/DCTF_22/BookStore/img/afterlogin.PNG" />
 </p>
 
 
@@ -816,7 +816,7 @@ this.logger.info(**maliciousInput**) => this.writeToLogfile(**maliciousInput**) 
 • this.downloadFile(**maliciousInput**) sends a request to <pre>https://XXXXXXXXX.x.pipedream.net</pre>
 
 <p align="center">
-  <img src="" />
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/f2793b53c31619cc39fa68ee12a67e485eda26a2/2022/DCTF_22/BookStore/img/flag.PNG" />
 </p>
 
 <p align="center">
