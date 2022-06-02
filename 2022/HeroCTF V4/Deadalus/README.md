@@ -1,9 +1,12 @@
 # HeroCTF V4 - PROG - HARD - Auteur : Log_S
 
+<p align="center">
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/a48cbf1b394fc359fa525b9f792e6fc059fac2d7/2022/HeroCTF%20V4/Deadalus/img/Deadalus.jpg" />
+</p>
 
 ## I. Description 
 
-Vous trouverez la description complète du challenge ici : challenge.md
+Vous trouverez la description complète du challenge ici : [challenge.md](https://github.com/Endeavxor/CTF-Writeups/blob/32b7259d311de8ac2cb2d36a08fb063fe4e5e9ab/2022/HeroCTF%20V4/Deadalus/challenge.md)
 
 ## II. Rapide retour au monde des mathématiques 
 Avant de plonger plus en détail sur la stratégie adoptée, je vais faire un rapide retour sur les notions nécessaires à sa compréhension.*(Vous pouvez passer à la suite si vous êtes déjà familier avec les graphes)*
@@ -16,7 +19,10 @@ Les **graphes** sont des objets/structures mathématiques qui ont été profond�
 
 Voici quelques exemples de graphes *(il en existe d'autres adapté à différents problèmes)*:
 
-![]()
+<p align="center">
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/a48cbf1b394fc359fa525b9f792e6fc059fac2d7/2022/HeroCTF%20V4/Deadalus/img/graphe.jpg"/>
+</p>
+
 
 Le premier est le plus commun, le second est un graphe dit "étiqueté" et le dernier, qui va nous intéresser pour ce challenge, est un graphe dit **"orienté"**. En effet comme on peut le constater, ce ne sont **pas des arêtes** mais des **arcs**, rendant la liaison entre deux sommets **unidirectionnelle** et non bidirectionnelle comme c'était le cas auparavant.
 
@@ -27,7 +33,9 @@ Le premier est le plus commun, le second est un graphe dit "étiqueté" et le de
 
 Pour illustrer, voici en rouge des circuits dans des graphes orientés :
 
-![]()
+<p align="center">
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/a48cbf1b394fc359fa525b9f792e6fc059fac2d7/2022/HeroCTF%20V4/Deadalus/img/circuit.jpg"/>
+</p>
 
 Nous allons pour ce challenge nous intéresser à des circuits **élémentaires**, *correspondant aux boucles*, qui ne sont ni plus ni moins que des circuits dont chaque sommet n'apparaît qu'une seule fois *(ce qui n'est pas le cas par exemple d'un des circuits dans le second graphe : x2->x4->**x3**->x5->x6->**x3**->x2 )*
 
@@ -45,16 +53,24 @@ Laissons de côté les graphes un court instant et revenons sur notre problème 
 
 Si l'on schématise ce parcours sur un des exemples voici ce que l'on a : 
 
-![]()
-![]()
+<p align="center">
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/a48cbf1b394fc359fa525b9f792e6fc059fac2d7/2022/HeroCTF%20V4/Deadalus/img/graphe0_ex.jpg"/>
+</p>
+<p align="center">
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/a48cbf1b394fc359fa525b9f792e6fc059fac2d7/2022/HeroCTF%20V4/Deadalus/img/graphe1_ex.jpg"/>
+</p>
 
 Comme on peut le remarquer, les points *('.')* sont redondants et on pourrait simplement aller directement à la prochaine case. Si l'on connecte entre elles les cases sans passer par les points et qu'on retire aussi les cas où l'on est bloqué *(par exemple '|' ici)*, on obtient un graphe bien plus digeste : 
 
-![]()
+<p align="center">
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/a48cbf1b394fc359fa525b9f792e6fc059fac2d7/2022/HeroCTF%20V4/Deadalus/img/graphe2_ex.jpg"/>
+</p>
 
 Et si vous ne voyez toujours pas où je veux en venir, retirons le labyrinthe : 
 
-![]()
+<p align="center">
+  <img src="https://github.com/Endeavxor/CTF-Writeups/blob/a48cbf1b394fc359fa525b9f792e6fc059fac2d7/2022/HeroCTF%20V4/Deadalus/img/graphe3_ex.jpg"/>
+</p>
 
 Eh bien nous voilà en présence d'un magnifique graphe composé de **2 circuits élémentaires** ! Exactement ce que nous recherchions.
 
