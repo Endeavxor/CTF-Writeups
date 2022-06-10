@@ -60,7 +60,7 @@ Si l'on schématise ce parcours sur un des exemples voici ce que l'on a :
   <img src="https://github.com/Endeavxor/CTF-Writeups/blob/a48cbf1b394fc359fa525b9f792e6fc059fac2d7/2022/HeroCTF%20V4/Deadalus/img/graphe1_ex.jpg"/>
 </p>
 
-Comme on peut le remarquer, les points *('.')* sont redondants et on pourrait simplement aller directement à la prochaine case. Si l'on connecte entre elles les cases sans passer par les points et qu'on retire aussi les cas où l'on est bloqué *(par exemple '|' ici)*, on obtient un graphe bien plus digeste : 
+Comme on peut le remarquer, les points *('.')* sont redondants et on pourrait simplement aller directement à la prochaine case. Si l'on connecte entre elles les cases sans passer par les points et qu'on retire aussi les cas où l'on est bloqué *(par exemple '|' ici)*, on obtient un parcours bien plus digeste : 
 
 <p align="center">
   <img src="https://github.com/Endeavxor/CTF-Writeups/blob/a48cbf1b394fc359fa525b9f792e6fc059fac2d7/2022/HeroCTF%20V4/Deadalus/img/graphe2_ex.jpg"/>
